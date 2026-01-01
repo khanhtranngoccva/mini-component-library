@@ -160,7 +160,7 @@ const IconInput = ({
             </LabelContent>
           </VisuallyHidden>
           {/* Icon for sighted users only */}
-          <Icon id={icon} size={size === "small" ? 16 : 24} aria-hidden={true} />
+          <Icon id={icon} size={size === "small" ? 16 : 24} aria-hidden={true} strokeWidth={2}/>
         </InputLabel>
         {/* The actual input element with accessibility perks */}
         <InternalInput id={inputId} {...props} size={size} />
