@@ -43,6 +43,7 @@ const InternalInput = styled.input.attrs(
   font-size: inherit;
   line-height: 1em;
   height: 1.5rem;
+  color: inherit;
   padding-block: 0;
   // Input should preferably be as wide as its content - 
   // If container is fit-content, the fit-content value here should be resolvable.
@@ -97,6 +98,10 @@ const IconInputWrapper = styled.div.attrs(
 
   &[data-size="large"] {
     font-size: 1.125em;
+  }
+
+  &:hover {
+    color: var(--black);
   }
 
   &:has(${InternalInput}:focus) {
