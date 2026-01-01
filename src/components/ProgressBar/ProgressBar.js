@@ -50,7 +50,6 @@ const ProgressBarTrackOuter = styled.div.attrs(
   height: 100%;
   width: 100%;
   border-radius: 4px;
-  pointer-events: none;
 `
 
 const ProgressBarTrackInner = styled.div.attrs(
@@ -66,7 +65,6 @@ const ProgressBarTrackInner = styled.div.attrs(
   height: 100%;
   width: ${props => props.percentage}%;
   transition: width 0.2s ease-in-out;
-  pointer-events: none;
 `;
 
 const ProgressBarInnerElement = styled.progress.attrs()`
@@ -78,7 +76,6 @@ const ProgressBarInnerElement = styled.progress.attrs()`
   width: 100%;
   height: 100%;
   opacity: 0;
-  pointer-events: visible;
 `;
 
 
