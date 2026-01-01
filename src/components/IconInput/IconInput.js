@@ -42,7 +42,6 @@ const InternalInput = styled.input.attrs(
   font-weight: inherit;
   font-size: inherit;
   line-height: 1em;
-  height: 1.5rem;
   color: inherit;
   padding-block: 0;
   // Input should preferably be as wide as its content - 
@@ -125,10 +124,12 @@ const IconInputInnerWrapper = styled.div.attrs(
 
   &[data-size="small"] {
     border-bottom-width: 1px;
+    height: ${24 / 16}rem;
   }
 
   &[data-size="large"] {
     border-bottom-width: 2px;
+    height: ${36 / 16}rem;
   }
 `;
 
@@ -160,7 +161,7 @@ const IconInput = ({
             </LabelContent>
           </VisuallyHidden>
           {/* Icon for sighted users only */}
-          <Icon id={icon} size={size === "small" ? 16 : 24} aria-hidden={true} strokeWidth={2}/>
+          <Icon id={icon} size={size === "small" ? 16 : 24} aria-hidden={true} strokeWidth={size === "small" ? 1 : 2} />
         </InputLabel>
         {/* The actual input element with accessibility perks */}
         <InternalInput id={inputId} {...props} size={size} />
