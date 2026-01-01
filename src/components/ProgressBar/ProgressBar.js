@@ -19,7 +19,6 @@ const ProgressBarWrapper = styled.div.attrs(
   transition-timing-function: ease-in-out;
   transition-property: height padding border-radius;
   position: relative;
-  pointer-events: none;
 
   &[data-size="small"] {
     border-radius: 4px;

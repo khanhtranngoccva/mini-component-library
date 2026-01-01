@@ -17,7 +17,7 @@ const SelectInternal = styled.select.attrs()`
   opacity: 0;
 `;
 
-const SelectLabel = styled.label`
+const SelectLabel = styled.div`
   --transparent-gray-15: ${COLORS.transparentGray15};
   --gray-700: ${COLORS.gray700};
   --black: ${COLORS.black};
@@ -30,6 +30,7 @@ const SelectLabel = styled.label`
   gap: 16px;
   background: var(--transparent-gray-15);
   color: var(--gray-700);
+  pointer-events: none;
 
   ${SelectInternal}:focus-visible + & {
     outline: 2px solid var(--primary);
@@ -64,7 +65,7 @@ const Select = ({ label, value, onChange, children, id, className, ...props }) =
         {children}
       </SelectInternal>
       {/* Display the label to sighted users only */}
-      <SelectLabel htmlFor={id} aria-hidden={true}>
+      <SelectLabel aria-hidden={true}>
         <SelectCurrentValue>
           {displayedValue ?? label}
         </SelectCurrentValue>
