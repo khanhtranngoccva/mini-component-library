@@ -42,6 +42,7 @@ const InternalInput = styled.input.attrs(
   font-weight: inherit;
   font-size: inherit;
   line-height: 1em;
+  height: 1.5rem;
   padding-block: 0;
   // Input should preferably be as wide as its content - 
   // If container is fit-content, the fit-content value here should be resolvable.
