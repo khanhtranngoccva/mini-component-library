@@ -99,7 +99,8 @@ const IconInputWrapper = styled.div.attrs(
 
   &:has(${InternalInput}:focus-visible) {
     outline: 2px solid;
-    outline-color: Highlight;
+    outline-color: var(--black);
+    outline-color: Highlight; 
     outline-color: -webkit-focus-ring-color;
     outline-offset: 2px;
   }
