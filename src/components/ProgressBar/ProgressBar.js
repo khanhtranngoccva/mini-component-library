@@ -38,13 +38,7 @@ const ProgressBarWrapper = styled.div.attrs(
   }
 `;
 
-const ProgressBarTrackOuter = styled.div.attrs(
-  (props) => {
-    return {
-      "data-size": props.size,
-    }
-  }
-)`
+const ProgressBarTrackOuter = styled.div`
   overflow: hidden;
   overflow: clip;
   height: 100%;
@@ -52,13 +46,7 @@ const ProgressBarTrackOuter = styled.div.attrs(
   border-radius: 4px;
 `
 
-const ProgressBarTrackInner = styled.div.attrs(
-  (props) => {
-    return {
-      "data-size": props.size,
-    }
-  }
-)`
+const ProgressBarTrackInner = styled.div`
   --primary: ${COLORS.primary};
   background-color: var(--primary);
   display: block;
@@ -85,8 +73,8 @@ const ProgressBar = ({ value, size, className, max = 100, ...props }) => {
   return <>
     <ProgressBarWrapper size={size} className={className}>
       {/* The track and fill for the progress bar (for sighted users only) */}
-      <ProgressBarTrackOuter size={size} aria-hidden={true}>
-        <ProgressBarTrackInner percentage={percentage} size={size}></ProgressBarTrackInner>
+      <ProgressBarTrackOuter aria-hidden={true}>
+        <ProgressBarTrackInner percentage={percentage}></ProgressBarTrackInner>
       </ProgressBarTrackOuter>
       {/* The actual progress bar element with accessibility perks */}
       <ProgressBarInnerElement value={value} max={max} {...props}></ProgressBarInnerElement>
