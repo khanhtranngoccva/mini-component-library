@@ -12,6 +12,13 @@ import ProgressBar from './ProgressBar';
         max: 100,
       },
     },
+    max: {
+      control: {
+        type: 'number',
+        min: 0,
+        max: 1000,
+      },
+    },
     size: {
       control: {
         type: 'select',
@@ -25,6 +32,6 @@ export const Template = (args) => <ProgressBar {...args} />;
 
 # ProgressBar
 
-<Story name="Default" args={{ value: 50, size: 'medium' }}>
+<Story name="Default" args={{ value: 50, size: 'medium', max: 100 }}>
   {Template.bind({})}
 </Story>
