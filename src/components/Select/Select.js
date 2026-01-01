@@ -15,6 +15,7 @@ const SelectInternal = styled.select.attrs()`
   top: 0;
   left: 0;
   opacity: 0;
+  appearance: none;
 `;
 
 const SelectLabel = styled.div`
