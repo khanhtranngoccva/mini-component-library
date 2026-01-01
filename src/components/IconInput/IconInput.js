@@ -88,6 +88,7 @@ const IconInputWrapper = styled.div.attrs(
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   color: var(--gray-700);
+  isolation: isolate;
 
   &[data-size="small"] {
     font-size: 0.875em;
