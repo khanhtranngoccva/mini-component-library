@@ -31,11 +31,11 @@ const SelectLabel = styled.label`
   background: var(--transparent-gray-15);
   color: var(--gray-700);
 
-  &:has(${SelectInternal}:focus-visible) {
+  ${SelectInternal}:focus-visible + & {
     outline: 2px solid var(--primary);
   }
 
-  &:has(${SelectInternal}:hover) {
+  ${SelectInternal}:hover + & {
     color: var(--black);
   }
 `
@@ -59,17 +59,17 @@ const Select = ({ label, value, onChange, children, id, className, ...props }) =
 
   return (
     <SelectWrapper className={className}>
+      {/* The actual select element with accessibility perks (including the label) */}
+      <SelectInternal label={label} id={id} value={value} onChange={onChange} {...props}>
+        {children}
+      </SelectInternal>
       {/* Display the label to sighted users only */}
       <SelectLabel htmlFor={id} aria-hidden={true}>
         <SelectCurrentValue>
           {displayedValue ?? label}
         </SelectCurrentValue>
-        <Icon id="chevron-down" size={24}/>
+        <Icon id="chevron-down" size={24} />
       </SelectLabel>
-      {/* The actual select element with accessibility perks (including the label) */}
-      <SelectInternal label={label} id={id} value={value} onChange={onChange} {...props}>
-        {children}
-      </SelectInternal>
     </SelectWrapper>
   );
 };
