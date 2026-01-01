@@ -33,8 +33,11 @@ const SelectLabel = styled.div`
   color: var(--gray-700);
   pointer-events: none;
 
-  ${SelectInternal}:focus-visible + & {
-    outline: 2px solid var(--primary);
+  ${SelectInternal}:focus + & {
+    outline: 2px solid;
+    outline-color: var(--black);
+    outline-color: Highlight; 
+    outline-color: -webkit-focus-ring-color;
   }
 
   ${SelectInternal}:hover + & {
