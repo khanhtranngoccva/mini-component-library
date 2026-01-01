@@ -115,7 +115,6 @@ const IconInputInnerWrapper = styled.div.attrs(
   }
 )`
   display: flex;
-  align-items: flex-end;
   border-bottom: solid var(--black);
 
   &[data-size="small"] {
