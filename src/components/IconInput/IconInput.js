@@ -19,7 +19,7 @@ const InputLabel = styled.label.attrs(
 
   &[data-size="small"] {
     padding-right: 8px;
-    padding-block: 3px;
+    padding-block: 4px 3px;
   }
 
   &[data-size="large"] {
@@ -59,7 +59,7 @@ const InternalInput = styled.input.attrs(
   }
 
   &[data-size="small"] {
-    padding-block: 3px;
+    padding-block: 4px 3px;
   }
 
   &[data-size="large"] {
