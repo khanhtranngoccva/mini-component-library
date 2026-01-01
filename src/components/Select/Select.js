@@ -64,7 +64,7 @@ const Select = ({ label, value, onChange, children, id, className, ...props }) =
         <SelectCurrentValue>
           {displayedValue ?? label}
         </SelectCurrentValue>
-        <Icon id="chevron-down" />
+        <Icon id="chevron-down" size={24}/>
       </SelectLabel>
       {/* The actual select element with accessibility perks (including the label) */}
       <SelectInternal label={label} id={id} value={value} onChange={onChange} {...props}>
