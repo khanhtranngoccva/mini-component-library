@@ -27,7 +27,7 @@ const SelectLabel = styled.label`
   padding: 12px 16px;
   display: inline-flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
   background: var(--transparent-gray-15);
   color: var(--gray-700);
 
